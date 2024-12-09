@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Profesional</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-section {
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        .form-row > div {
+            flex: 1;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #1b6080;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario Profesional</h1>
+    <form action="#" method="post">
+        <!-- Información Personal -->
+        <div class="form-section">
+            <h2>Información Personal</h2>
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required>
+            
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
+            
+            <label for="telefono">Número de teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required>
+            
+            <div class="form-row">
+                <div>
+                    <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                </div>
+                <div>
+                    <label for="genero">Género</label>
+                    <select id="genero" name="genero" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dirección -->
+        <div class="form-section">
+            <h2>Dirección</h2>
+            <label for="direccion">Dirección completa</label>
+            <input type="text" id="direccion" name="direccion" placeholder="Calle, número, colonia" required>
+            
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Ingrese su ciudad" required>
+            
+            <label for="estado">Estado/Provincia</label>
+            <input type="text" id="estado" name="estado" placeholder="Ingrese su estado o provincia" required>
+            
+            <label for="codigo-postal">Código postal</label>
+            <input type="text" id="codigo-postal" name="codigo-postal" placeholder="Ingrese su código postal" required>
+        </div>
+
+        <!-- Preferencias -->
+        <div class="form-section">
+            <h2>Preferencias</h2>
+            <label>¿Qué productos le interesan? (Seleccione todas las opciones que correspondan)</label>
+            <input type="checkbox" id="camisetas" name="productos[]" value="camisetas">
+            <label for="camisetas">Camisetas</label>
+            <input type="checkbox" id="accesorios" name="productos[]" value="accesorios">
+            <label for="accesorios">Accesorios</label>
+            <input type="checkbox" id="coleccionables" name="productos[]" value="coleccionables">
+            <label for="coleccionables">Coleccionables</label>
+            <input type="checkbox" id="otro" name="productos[]" value="otro">
+            <label for="otro">Otros</label>
+
+            <label>¿Cómo nos conoció?</label>
+            <input type="radio" id="redes-sociales" name="conocido" value="redes-sociales" required>
+            <label for="redes-sociales">Redes Sociales</label>
+            <input type="radio" id="amigo" name="conocido" value="amigo">
+            <label for="amigo">Recomendación de un amigo</label>
+            <input type="radio" id="anuncio" name="conocido" value="anuncio">
+            <label for="anuncio">Anuncio</label>
+            <input type="radio" id="otro-conocido" name="conocido" value="otro">
+            <label for="otro-conocido">Otro</label>
+        </div>
+
+        <!-- Comentarios -->
+        <div class="form-section">
+            <h2>Comentarios adicionales</h2>
+            <label for="comentarios">¿Hay algo más que desee decirnos?</label>
+            <textarea id="comentarios" name="comentarios" rows="5" placeholder="Escriba sus comentarios aquí..."></textarea>
+        </div>
+
+        <!-- Enviar -->
+        <button type="submit">Enviar formulario</button>
+    </form>
+</body>
+</html>
